@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/viewport.css">
+    <title>Sticky Notes</title>
+</head>
+<body>
+
+    <main>
+        <section class="intro">
+            <div class="intro-inner">
+                <header class="intro-header">
+                    <h3 class="logo"><span class="whiten">Sticky</span><span class="colored">Notes</span></h3>
+                    <div class="search-box">
+                            <input type="text" id="search-note" placeholder="Search notes...">
+                            <div id="search-btn"><i class="fas fa-search"></i></div>
+                    </div>
+                    <div class="intro-header-right">
+                        <button class="new-note-btn" data-btn="add">Add new note</button>
+                    </div>
+                </header>
+                <div class="notes" id="notes-lists">
+                    <div class="notes-item empty" data-btn="add"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Popups -->
+    <div class="popup add-popup" data-popup="add">
+        <div class="add-note-wrapper">
+            <div class="close-popup"><i class="fas fa-times"></i></div>
+            <h3 class="popup-title">Add Note</h3>
+            <form id="add-note-form" >
+            <div class="inputs">
+                <input class="input-item" id="title" type="text" placeholder="Enter Note Title">
+
+                <textarea class="input-item" id="desc" placeholder="Enter Note Description"></textarea>
+            </div>
+
+            <button class="add-note-submit" type="submit">Add Note</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup edit-popup" data-popup="edit">
+        <div class="add-note-wrapper">
+            <div class="close-popup"><i class="fas fa-times"></i></div>
+            <h3 class="popup-title">Edit Note</h3>
+            <div class="inputs">
+                <input class="input-item" type="text" placeholder="Enter Note Title">
+
+                <textarea class="input-item" id="" placeholder="Enter Note Description"></textarea>
+                <div>
+                    <label for="">Date Added</label>
+                    <input class="input-item" type="text" readonly value="Sep, 9, 2021 ">
+                </div>
+            </div>
+
+            <button class="add-note-submit">Edit Note</button>
+        </div>
+    </div>
+    <div class="popup delete-popup" data-popup="delete">
+        <div class="add-note-wrapper">
+            <div class="close-popup"><i class="fas fa-times"></i></div>
+            <h3 class="popup-title">Are you sure you want delete this note?</h3>
+            <div class="action">
+                <button class="btn-no">No</button>
+                <button class="btn-yes">Yes</button>
+            </div>
+
+            
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+</html>
